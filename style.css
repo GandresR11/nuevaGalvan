@@ -122,12 +122,13 @@ section { padding: 120px 10%; text-align: center; }
 
 .modal-content {
     position: relative;
-    background-color: var(--negro);
+    background-color: white;
     margin: 10% auto;
     width: 90%;
     max-width: 1000px;
     height: 85vh;
     border: 1px solid var(--dorado);
+    border-radius: 10px;
     animation: slideUp 0.5s ease;
 }
 
