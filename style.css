@@ -51,6 +51,37 @@ header {
 }
 .nav-link:hover { color: var(--dorado); }
 
+.lista-servicios {
+    list-style: none; /* Quita los puntos negros de la lista */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.lista-servicios li {
+    display: flex;
+    align-items: baseline; /* Alinea el texto por la base de las letras */
+    gap: 5px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.servicio-puntos {
+    flex-grow: 1; /* Esto hace que los puntos crezcan hasta llenar el vacío */
+    border-bottom: 1.5px dotted #aaa; /* Aquí defines el color y grosor de los puntos */
+    height: 1.2em; /* Ajusta la posición vertical de los puntos */
+}
+
+.servicio-nombre {
+    font-weight: 600;
+    color: #fff; /* O el color que uses en tu diseño */
+}
+
+.servicio-valor {
+    font-weight: bold;
+    color: #ffd700; /* Un color dorado o resaltado para el precio */
+}
+
+
 /* SECCIONES */
 section { padding: 120px 10%; text-align: center; }
 .bg-darker { background-color: #050505; }
