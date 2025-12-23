@@ -78,7 +78,7 @@ header {
 
 .servicio-valor {
     font-weight: bold;
-    color: #ffd700; /* Un color dorado o resaltado para el precio */
+   color: var(--dorado); /* Un color dorado o resaltado para el precio */
 }
 
 
