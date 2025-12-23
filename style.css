@@ -62,7 +62,7 @@ section { padding: 120px 10%; text-align: center; }
 #home {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80') center/cover;
+                url('https://github.com/GandresR11/nuevaGalvan/blob/main/imagenes/Encabezado.jpeg?raw=true') center/cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
