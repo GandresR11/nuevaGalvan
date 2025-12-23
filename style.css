@@ -160,6 +160,81 @@ section { padding: 120px 10%; text-align: center; }
 }
 .whatsapp-float:hover { transform: scale(1.1); }
 
+/* --- SECCIÓN UBICACIÓN --- */
+.location-section {
+    position: relative;
+    background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), 
+                url('https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&q=80'); /* Cambia esta URL por la foto de tu local */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 5%;
+}
+
+.location-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.location-info {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-left: 3px solid var(--dorado);
+}
+
+.info-box h3 {
+    color: var(--dorado);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.info-box p {
+    margin-bottom: 5px;
+    color: var(--plateado);
+}
+
+.map-link {
+    color: var(--dorado);
+    text-decoration: underline;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.map-link:hover {
+    color: var(--blanco);
+}
+
+.social-links {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a:hover {
+    color: var(--dorado);
+}
+
+.location-map {
+    flex: 1;
+    min-width: 300px;
+    border: 1px solid var(--dorado);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Ajuste móvil */
+@media (max-width: 768px) {
+    .location-info { text-align: center; border-left: none; border-bottom: 3px solid var(--dorado); }
+    .social-links { justify-content: center; }
+}
+
+
 /* FOOTER */
 footer { padding: 50px; border-top: 1px solid #222; color: #555; font-size: 0.8rem; }
 
