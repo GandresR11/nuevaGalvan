@@ -241,6 +241,8 @@ section { padding: 120px 10%; text-align: center; }
     display: block;
     margin: 20px auto;  /* El 'auto' en los lados centra la imagen cuando es más pequeña que la pantalla */
     border-radius: 8px;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    filter: brightness(0.8);
 }
 
 /* FOOTER */
