@@ -205,6 +205,17 @@ section { padding: 120px 10%; text-align: center; }
     padding: 100px 5%;
 }
 
+
+.services-section {
+    position: relative;
+    background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), 
+                url('https://github.com/GandresR11/nuevaGalvan/blob/main/imagenes/Servicios1.jpeg?raw=true'); /* Cambia esta URL por la foto de tu local */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 100px 5%;
+}
+
 .location-container {
     display: flex;
     flex-wrap: wrap;
