@@ -3,159 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Hair Studio | Elegancia en cada corte</title>
+    <title>Luxury Hair Studio | Elegancia y Estilo</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
     
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <style>
-        /* --- 1. VARIABLES DE COLOR (Personaliza aquí) --- */
-        :root {
-            --negro: #0a0a0a;
-            --blanco: #ffffff;
-            --dorado: #c5a059;
-            --plateado: #e0e0e0;
-            --gris-oscuro: #1a1a1a;
-            --transition: all 0.4s ease;
-        }
-
-        /* --- 2. ESTILOS GENERALES --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--negro);
-            color: var(--blanco);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, .nav-logo {
-            font-family: 'Cinzel', serif;
-            letter-spacing: 2px;
-        }
-
-        a { text-decoration: none; color: inherit; }
-        ul { list-style: none; }
-
-        /* --- 3. ENCABEZADO Y MENÚ --- */
-        header {
-            position: fixed;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(10, 10, 10, 0.95);
-            border-bottom: 1px solid var(--dorado);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo { color: var(--dorado); font-size: 1.5rem; font-weight: bold; }
-
-        .nav-menu { display: flex; gap: 2rem; }
-        .nav-link:hover { color: var(--dorado); transition: var(--transition); }
-
-        /* --- 4. SECCIÓN HERO (Inicio) --- */
-        #home {
-            height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80') center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .btn-gold {
-            margin-top: 20px;
-            padding: 12px 30px;
-            border: 1px solid var(--dorado);
-            color: var(--dorado);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: var(--transition);
-            cursor: pointer;
-            background: transparent;
-        }
-
-        .btn-gold:hover { background: var(--dorado); color: var(--negro); }
-
-        /* --- 5. SECCIONES COMUNES --- */
-        section { padding: 100px 10%; text-align: center; }
-        .section-title { font-size: 2.5rem; margin-bottom: 50px; color: var(--plateado); }
-        .section-title span { color: var(--dorado); }
-
-        /* --- 6. SERVICIOS Y PRODUCTOS (Grillas) --- */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--gris-oscuro);
-            padding: 30px;
-            border: 1px solid #333;
-            transition: var(--transition);
-        }
-
-        .card:hover { border-color: var(--dorado); transform: translateY(-10px); }
-
-        /* --- 7. FORMULARIO Y CONTACTO --- */
-        .contact-flex {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 50px;
-            justify-content: center;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        input, textarea {
-            padding: 15px;
-            background: #222;
-            border: 1px solid #444;
-            color: white;
-        }
-
-        /* --- 8. BOTÓN FLOTANTE WHATSAPP --- */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 1000;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-menu { display: none; } /* Simplificado para el ejemplo */
-        }
-    </style>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -175,31 +31,31 @@
     <section id="home">
         <h1 data-aos="fade-up">Arte, Estilo y Distinción</h1>
         <p data-aos="fade-up" data-aos-delay="200">Tu cabello merece el trato de una joya.</p>
-        <a href="#contact" class="btn-gold" data-aos="zoom-in" data-aos-delay="400">Agendar Cita</a>
+        <button class="btn-gold" data-aos="zoom-in" data-aos-delay="400" onclick="openCalendar()">Agendar Cita</button>
     </section>
 
     <section id="about" data-aos="fade-right">
         <h2 class="section-title">Nuestra <span>Esencia</span></h2>
-        <p style="max-width: 800px; margin: 0 auto;">Somos más que una peluquería. Somos un refugio de elegancia donde la técnica de vanguardia se encuentra con el servicio personalizado de lujo.</p>
+        <p class="section-text">Somos un refugio de elegancia donde la técnica de vanguardia se encuentra con el servicio personalizado de lujo. Cada corte es una obra maestra diseñada para resaltar tu identidad.</p>
     </section>
 
-    <section id="services" style="background-color: #0f0f0f;">
+    <section id="services" class="bg-darker">
         <h2 class="section-title" data-aos="fade-up">Servicios <span>Exclusivos</span></h2>
         <div class="grid-container">
             <div class="card" data-aos="flip-left">
-                <i class="fas fa-cut" style="color:var(--dorado); font-size: 2rem;"></i>
+                <i class="fas fa-cut card-icon"></i>
                 <h3>Corte Signature</h3>
-                <p>Estilo personalizado según tu fisonomía.</p>
+                <p>Estilo personalizado según tu fisonomía y tendencias internacionales.</p>
             </div>
             <div class="card" data-aos="flip-left" data-aos-delay="200">
-                <i class="fas fa-magic" style="color:var(--dorado); font-size: 2rem;"></i>
+                <i class="fas fa-magic card-icon"></i>
                 <h3>Colorimetría Oro</h3>
-                <p>Tintes orgánicos con acabados brillantes.</p>
+                <p>Tintes orgánicos de alta gama con acabados brillantes y duraderos.</p>
             </div>
             <div class="card" data-aos="flip-left" data-aos-delay="400">
-                <i class="fas fa-crown" style="color:var(--dorado); font-size: 2rem;"></i>
+                <i class="fas fa-crown card-icon"></i>
                 <h3>Tratamientos Spa</h3>
-                <p>Hidratación profunda con vapor de ozono.</p>
+                <p>Rituales de hidratación profunda con vapor de ozono y aceites esenciales.</p>
             </div>
         </div>
     </section>
@@ -208,63 +64,40 @@
         <h2 class="section-title" data-aos="fade-up">Nuestra <span>Línea</span></h2>
         <div class="grid-container">
             <div class="card" data-aos="fade-up">
-                <div style="height: 200px; background: #333; margin-bottom: 15px;">IMAGEN PRODUCTO</div>
+                <div class="product-placeholder">SÉRUM</div>
                 <h3>Sérum Plateado</h3>
-                <p>$45.00</p>
+                <p class="price">$45.00</p>
             </div>
             <div class="card" data-aos="fade-up" data-aos-delay="200">
-                <div style="height: 200px; background: #333; margin-bottom: 15px;">IMAGEN PRODUCTO</div>
+                <div class="product-placeholder">ELIXIR</div>
                 <h3>Elixir Dorado</h3>
-                <p>$60.00</p>
+                <p class="price">$60.00</p>
             </div>
         </div>
     </section>
 
     <section id="contact">
         <h2 class="section-title" data-aos="fade-up">Reserva tu <span>Experiencia</span></h2>
-        <div class="contact-flex">
-            <form id="appointmentForm" data-aos="fade-left">
-                <input type="text" id="name" placeholder="Tu Nombre Completo" required>
-                <input type="date" id="date" required>
-                <select id="service" style="padding: 15px; background: #222; color: white; border: 1px solid #444;">
-                    <option value="Corte">Corte Signature</option>
-                    <option value="Color">Colorimetría</option>
-                    <option value="Tratamiento">Tratamiento Spa</option>
-                </select>
-                <button type="submit" class="btn-gold">Enviar Solicitud</button>
-            </form>
-        </div>
+        <p data-aos="fade-up">Haz clic en el botón inferior para abrir nuestra agenda oficial y elegir tu horario.</p>
+        <button class="btn-gold" data-aos="zoom-in" onclick="openCalendar()">Abrir Calendario de Citas</button>
     </section>
 
-    <footer style="padding: 40px; text-align: center; border-top: 1px solid #333;">
-        <p>&copy; 2023 Luxury Studio. Todos los derechos reservados.</p>
-    </footer>
+    <div id="calendarModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeCalendar()">&times;</span>
+            <iframe src="https://calendar.app.google/hWHvNfavn41brphr7" width="100%" height="100%" frameborder="0"></iframe>
+        </div>
+    </div>
 
-    <a href="https://wa.me/TUNUMEROAQUI?text=Hola!%20Deseo%20agendar%20una%20cita" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/TUNUMEROAQUI?text=Hola!%20Deseo%20más%20información%20sobre%20sus%20servicios" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Inicializar Animaciones
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+    <footer>
+        <p>&copy; 2024 Luxury Hair Studio. Design & Elegance.</p>
+    </footer>
 
-        // Lógica sencilla para enviar el formulario a WhatsApp (Agendar Cita)
-        document.getElementById('appointmentForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const date = document.getElementById('date').value;
-            const service = document.getElementById('service').value;
-            
-            // Construir mensaje de WhatsApp
-            const message = `Hola! Mi nombre es ${name}. Me gustaría agendar una cita para el servicio de ${service} el día ${date}.`;
-            const whatsappUrl = `https://wa.me/TUNUMEROAQUI?text=${encodeURIComponent(message)}`;
-            
-            window.open(whatsappUrl, '_blank');
-        });
-    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
