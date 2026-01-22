@@ -40,3 +40,23 @@ window.addEventListener('scroll', function() {
         header.style.padding = '1.2rem 5%';
     }
 });
+
+// Menú Móvil toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+    const icon = menuToggle.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+});
+
+// Cerrar menú al hacer clic en un link (Móvil)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        document.querySelector('.menu-toggle i').classList.add('fa-bars');
+        document.querySelector('.menu-toggle i').classList.remove('fa-times');
+    });
+});
