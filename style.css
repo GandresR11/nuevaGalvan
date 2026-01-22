@@ -636,3 +636,26 @@ footer { padding: 50px; border-top: 1px solid #222; color: #555; font-size: 0.8r
     .location-grid { grid-template-columns: 1fr 1fr; align-items: center; }
     .price-list li { font-size: 1.1rem; }
 }
+/* SERVICIOS RESPONSIVOS */
+.services-container { padding: 50px 20px; }
+.tabs-scroll-container { 
+    overflow-x: auto; /* Permite scroll horizontal en botones si hay muchos en móvil */
+    white-space: nowrap;
+    margin-bottom: 30px;
+    -webkit-overflow-scrolling: touch;
+}
+.tabs-menu { display: inline-flex; gap: 10px; padding-bottom: 10px; }
+.tab-btn { padding: 8px 15px; background: white; border: 1px solid #ddd; font-size: 0.8rem; }
+.tab-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+.price-list li { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.9rem; border-bottom: 1px solid #eee; }
+
+/* BOTONES FLOTANTES MÁS PEQUEÑOS EN MÓVIL */
+.floating-bridal-btn {
+    position: fixed; left: 15px; bottom: 15px; width: 65px; height: 65px;
+    background: white; border: 1px solid var(--primary); border-radius: 50%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 99;
+}
+.floating-bridal-btn span { font-size: 0.5rem; font-weight: bold; color: var(--primary); }
+
+.whatsapp-float { position: fixed; right: 15px; bottom: 15px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 25px; z-index: 99; text-decoration: none; }
