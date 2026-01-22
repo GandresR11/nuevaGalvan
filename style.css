@@ -70,7 +70,7 @@ header {
 
     padding: 1.2rem 5%;
 
-    display: flex;
+    /*display: flex;*/
 
     justify-content: space-between;
 
@@ -80,7 +80,9 @@ header {
 .main-header {
     position: fixed; width: 100%; z-index: 1000;
     padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(10, 10, 10, 0.95);
+    /*background: rgba(255, 255, 255, 0.95);*/
+    
     backdrop-filter: blur(5px);
     border-bottom: 1px solid rgba(197, 160, 89, 0.1);
 }
