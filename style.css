@@ -1,13 +1,4 @@
-/* VARIABLES - Paleta Clara y Elegante 
-:root {
-    --negro: #1a1a1a;       /* Ahora usado para texto principal */
-    --blanco: #ffffff;      /* Fondo principal */
-    --dorado: #b59458;      /* Dorado más refinado y legible en blanco */
-    --plateado: #777777;    /* Gris para textos secundarios */
-    --gris-oscuro: #f9f9f9; /* Ahora un gris muy claro para fondos de tarjetas */
-    --borde-suave: #eeeeee;
-    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}*/
+
 /* VARIABLES */
 
 :root {
