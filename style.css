@@ -95,7 +95,7 @@ header {
     background: white; display: none; padding: 20px;
     box-shadow: 0 10px 10px rgba(0,0,0,0.1);
 }
-.nav-menu.active { display: block; }
+.nav-menu.active { display: block; background:var(--negro); }
 .nav-links { list-style: none; text-align: center; }
 .nav-links li { margin: 15px 0; }
 .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 600; text-transform: uppercase; font-size: 0.9rem; }
