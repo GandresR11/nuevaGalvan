@@ -563,9 +563,9 @@ section { padding: 120px 10%; text-align: center; }
 
 .location-map {
 
-    flex: 1;
+    /*flex: 1;*/
 
-    min-width: 300px;
+    /*min-width: 300px;*/
 
     border: 1px solid var(--dorado);
 
