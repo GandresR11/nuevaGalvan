@@ -107,7 +107,7 @@ header {
 
 .nav-logo { color: var(--dorado); font-size: 1.5rem; font-weight: bold; }
 
-.nav-menu { display: flex; gap: 2.5rem; list-style: none; }
+/*.nav-menu { display: flex; gap: 2.5rem; list-style: none; }*/
 
 .nav-link { 
 
