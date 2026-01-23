@@ -1,12 +1,12 @@
 /* VARIABLES */
-
+/*
 :root {
   --negro: #444444;
   --blanco: #fafafa;
   --dorado: #e6b566;
   --plateado: #d9e4ec;
   --gris-oscuro: #7a7a7a;
-  --transition: all 0.4s ease-in-out;
+  --transition: all 0.4s ease-in-out;*/
 
   
   /*--negro: #333333;
@@ -32,6 +32,13 @@
 
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);*/
 
+:root {
+  --negro: #0a0a0a;
+  --blanco: #f5f5f5;
+  --dorado: #c5a059;
+  --plateado: #b0b0b0;
+  --gris-oscuro: #121212;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
