@@ -550,7 +550,18 @@ margin: auto;
     color: var(--dorado);
 
 }
+.social-link a {
+  display: block;
+  margin: 8px 0;
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
 
+.social-link i {
+  margin-right: 8px;
+  color: #25D366; /* verde WhatsApp por ejemplo */
+}
 
 
 .social-links a:hover {
