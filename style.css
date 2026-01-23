@@ -607,7 +607,7 @@ margin: auto;
 
     display: block;
 
-    margin: 0;  /* El 'auto' en los lados centra la imagen cuando es más pequeña que la pantalla */
+    margin: auto;  /* El 'auto' en los lados centra la imagen cuando es más pequeña que la pantalla */
     padding:0;
     border-radius: 8px;
 
