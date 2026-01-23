@@ -60,7 +60,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         document.querySelector('.menu-toggle i').classList.remove('fa-times');
     });
 });
-<script>
+
   // Selecciona todos los títulos de las tarjetas
   const cards = document.querySelectorAll('.card');
 
@@ -77,4 +77,6 @@ document.querySelectorAll('.nav-links a').forEach(link => {
       list.style.display = 'block';
     });
   });
-</script>
+
+document.querySelectorAll('.lista-servicios').forEach(l => l.classList.remove('show'));
+list.classList.add('show');
