@@ -1,7 +1,17 @@
 /* VARIABLES */
 
 :root {
+  --negro: #333333;
+  --blanco: #ffffff;
+  --dorado: #d4af37;
+  --plateado: #f0f0f0;
+  --gris-oscuro: #888888;
+  --transition: all 0.4s ease;
 
+
+
+    
+/*
     --negro: #0a0a0a;
 
     --blanco: #ffffff;
@@ -12,7 +22,7 @@
 
     --gris-oscuro: #1a1a1a;
 
-    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);*/
 
 }
 
