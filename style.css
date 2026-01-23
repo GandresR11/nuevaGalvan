@@ -560,11 +560,11 @@ margin: auto;
 
 .social-link i {
   margin-right: 8px;
-  color: #25D366; /* verde WhatsApp por ejemplo */
+  color: var(--dorado); /* verde WhatsApp por ejemplo */
 }
 
 
-.social-links a:hover {
+.social-links a:hover i {
 
     color: var(--plateado);
 
