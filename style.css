@@ -685,3 +685,15 @@ justify-content: center;
 font-size: 25px; 
 z-index: 99; 
 text-decoration: none; }*/
+
+.videos-container {
+  display: flex;              /* Activa flexbox */
+  justify-content: center;    /* Centra los videos horizontalmente */
+  gap: 20px;                  /* Espacio entre videos */
+  margin: 20px 0;
+}
+
+.videos-container video {
+  width: 30%;                 /* Cada video ocupa un tercio del ancho */
+  border-radius: 8px;         /* Bordes redondeados opcionales */
+}
