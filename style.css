@@ -477,14 +477,14 @@ section { padding: 120px 10%; text-align: center; }
 
 .location-info {
 
-    flex: 1;
+   /* flex: 1;*/
 
-    min-width: 300px;
+   /* min-width: 300px;*/
 
     text-align: left;
 
     background: rgba(0, 0, 0, 0.6);
-
+margin: auto;
     padding: 40px;
 
     border-left: 3px solid var(--dorado);
@@ -566,6 +566,7 @@ section { padding: 120px 10%; text-align: center; }
     /*flex: 1;*/
 
     /*min-width: 300px;*/
+    margin:auto;
 
     border: 1px solid var(--dorado);
 
