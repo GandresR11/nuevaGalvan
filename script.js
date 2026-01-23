@@ -60,3 +60,21 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         document.querySelector('.menu-toggle i').classList.remove('fa-times');
     });
 });
+<script>
+  // Selecciona todos los títulos de las tarjetas
+  const cards = document.querySelectorAll('.card');
+
+  cards.forEach(card => {
+    const title = card.querySelector('h3');
+    const list = card.querySelector('.lista-servicios');
+
+    // Al hacer clic en el título
+    title.addEventListener('click', () => {
+      // Oculta todas las listas primero
+      document.querySelectorAll('.lista-servicios').forEach(l => l.style.display = 'none');
+
+      // Muestra solo la lista de la tarjeta clicada
+      list.style.display = 'block';
+    });
+  });
+</script>
