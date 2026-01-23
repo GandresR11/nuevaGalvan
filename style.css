@@ -715,3 +715,17 @@ video::-webkit-media-controls-play-button {
   display: block !important;
 }
 
+.lista-servicios {
+  display: none; /* ocultas todas las listas inicialmente */
+  margin-top: 10px;
+}
+
+.lista-servicios {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.lista-servicios.show {
+  max-height: 500px; /* ajusta según el contenido */
+}
