@@ -60,7 +60,22 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         document.querySelector('.menu-toggle i').classList.remove('fa-times');
     });
 });
+<script>
+  const headers = document.querySelectorAll('.card-header');
 
+  headers.forEach(header => {
+    header.addEventListener('click', () => {
+      // Ocultar todas las listas
+      document.querySelectorAll('.lista-servicios').forEach(list => list.classList.remove('show'));
+      
+      // Mostrar solo la lista de la tarjeta clicada
+      const list = header.nextElementSibling;
+      list.classList.add('show');
+    });
+  });
+</script>
+
+    
   // Selecciona todos los títulos de las tarjetas
   const cards = document.querySelectorAll('.card');
 
