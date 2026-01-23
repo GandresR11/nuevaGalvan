@@ -697,3 +697,21 @@ text-decoration: none; }*/
   width: 30%;                 /* Cada video ocupa un tercio del ancho */
   border-radius: 8px;         /* Bordes redondeados opcionales */
 }
+
+.video-ig {
+  width: 320px;      /* tamaño típico Instagram */
+  height: 320px;     /* cuadrado */
+  object-fit: cover; /* recorta para mantener proporción */
+  border-radius: 12px;
+}
+
+/* Ocultar todos los controles excepto el botón de play */
+video::-webkit-media-controls-panel {
+  display: none !important;
+  -webkit-appearance: none;
+}
+
+video::-webkit-media-controls-play-button {
+  display: block !important;
+}
+
