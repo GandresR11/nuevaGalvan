@@ -387,7 +387,7 @@ section { padding: 120px 10%; text-align: center; }
 
 .whatsapp-float {
 
-    position: absolute;
+    position: fixed;
 
     bottom: 30px; right: 30px;
 
@@ -670,4 +670,18 @@ footer { padding: 50px; border-top: 1px solid #222; color: #555; font-size: 0.8r
 }
 .floating-bridal-btn span { font-size: 0.5rem; font-weight: bold; color: var(--primary); }
 
-.whatsapp-float { position: fixed; right: 15px; bottom: 15px; background: #25d366; color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 25px; z-index: 99; text-decoration: none; }
+/*.whatsapp-float { 
+position: fixed; 
+right: 15px; 
+bottom: 15px; 
+background: #25d366; 
+color: white; 
+width: 55px; 
+height: 55px; 
+border-radius: 50%; 
+display: flex; 
+align-items: center; 
+justify-content: center; 
+font-size: 25px; 
+z-index: 99; 
+text-decoration: none; }*/
