@@ -1,12 +1,20 @@
 /* VARIABLES */
 
 :root {
-  --negro: #333333;
+  --negro: #444444;
+  --blanco: #fafafa;
+  --dorado: #e6b566;
+  --plateado: #d9e4ec;
+  --gris-oscuro: #7a7a7a;
+  --transition: all 0.4s ease-in-out;
+
+  
+  /*--negro: #333333;
   --blanco: #ffffff;
   --dorado: #d4af37;
   --plateado: #f0f0f0;
   --gris-oscuro: #888888;
-  --transition: all 0.4s ease;
+  --transition: all 0.4s ease;*/
 
 
 
