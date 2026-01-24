@@ -754,6 +754,7 @@ video::-webkit-media-controls-play-button {
   /* ANIMACIONES: Brillo (10s) y Flotación (3s) combinadas */
   animation: float-animation 3s infinite ease-in-out;
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  line-height: 0.7;
 }
 
 /* Efecto al pasar el mouse: se eleva más y la sombra se aleja */
