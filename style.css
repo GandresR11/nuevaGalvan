@@ -729,7 +729,7 @@ video::-webkit-media-controls-play-button {
 .lista-servicios.show {
   max-height: 500px; /* ajusta según el contenido */
 }
-/* Boton novias */
+/*Boton Novias*/
 .btn-noviasl {
   position: fixed;
   bottom: 10%;
@@ -737,7 +737,7 @@ video::-webkit-media-controls-play-button {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  border: 2px solid #e6b566;
+  border: 4px solid #e6b566;
   background: var(--dorado);
   color: var(--blanco);
   display: flex;
@@ -745,20 +745,38 @@ video::-webkit-media-controls-play-button {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, background 0.3s ease;
   z-index: 999;
-  /* Importante para el efecto de brillo */
-  overflow: hidden; 
+  overflow: hidden;
+
+  /* SOMBRA INICIAL: Difusa y suave para simular elevación */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  
+  /* ANIMACIONES: Brillo (10s) y Flotación (3s) combinadas */
+  animation: float-animation 3s infinite ease-in-out;
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efecto al pasar el mouse: se eleva más y la sombra se aleja */
 .btn-noviasl:hover {
-  transform: scale(1.15);
+  transform: scale(1.1) translateY(-10px);
   background: var(--plateado);
   color: var(--dorado);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5); /* Sombra más profunda al alejarse del "suelo" */
 }
 
-/* Efecto de Brillo (Shimmer) */
+/* Animación de levitación suave */
+@keyframes float-animation {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  }
+  50% {
+    transform: translateY(-12px); /* El botón sube */
+    box-shadow: 0 30px 45px rgba(0, 0, 0, 0.3); /* La sombra se expande y suaviza */
+  }
+}
+
+/* --- Se mantiene el efecto de brillo previo --- */
 .shimmer-effect::after {
   content: "";
   position: absolute;
@@ -766,7 +784,6 @@ video::-webkit-media-controls-play-button {
   left: -150%;
   width: 200%;
   height: 200%;
-  background: rgba(255, 255, 255, 0.4);
   background: linear-gradient(
     to right, 
     rgba(255, 255, 255, 0) 0%, 
@@ -774,39 +791,33 @@ video::-webkit-media-controls-play-button {
     rgba(255, 255, 255, 0) 100%
   );
   transform: rotate(30deg);
-  /* Animación de 1.5s de duración, se repite cada 10s */
   animation: shine 10s infinite ease-in-out;
 }
 
 @keyframes shine {
   0% { left: -150%; }
-  15% { left: 150%; } /* El brillo cruza rápido al inicio */
-  100% { left: 150%; } /* Se queda esperando el resto de los 10 segundos */
+  15% { left: 150%; }
+  100% { left: 150%; }
 }
 
-/* Texto "Exclusivo" elegante */
-.btn-noviasl .exclusivo {
-  font-family: 'Cormorant Garamond', serif; 
-  font-size: 1rem;
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: 0.2rem;
+/* Ajustes de texto para legibilidad sobre el brillo */
+.btn-noviasl .exclusivo, 
+.btn-noviasl .novias, 
+.btn-noviasl i {
   position: relative;
   z-index: 2;
 }
 
-/* Texto "Novias" minimalista */
+.btn-noviasl .exclusivo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  font-style: italic;
+  letter-spacing: 0.2rem;
+}
+
 .btn-noviasl .novias {
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 900;
   margin-top: 4px;
-  position: relative;
-  z-index: 2;
-}
-
-/* Asegurar que el icono esté sobre el brillo */
-.btn-noviasl i {
-  position: relative;
-  z-index: 2;
 }
