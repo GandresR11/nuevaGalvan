@@ -732,8 +732,8 @@ video::-webkit-media-controls-play-button {
 /*BOton novias*/
 .btn-noviasl {
   position: fixed;
-  bottom:100px;
-  right: 100px;
+  bottom:10%;
+  left:10%;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -751,9 +751,9 @@ video::-webkit-media-controls-play-button {
 }
 
 .btn-noviasl:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
   background: var(--plateado);
-  color: var(--negro);
+  color: var(--dorado);
 }
 
 /* Texto "Exclusivo" elegante */
@@ -762,7 +762,7 @@ video::-webkit-media-controls-play-button {
   font-size: 1rem;
   font-style: italic;
   font-weight: 400;
-  letter-spacing: 1px;
+  letter-spacing: 0.2rem;
 
 }
 
@@ -770,6 +770,6 @@ video::-webkit-media-controls-play-button {
 .btn-noviasl .novias {
   font-family: 'Montserrat', sans-serif; /* fuente moderna */
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 999;
   margin-top: 4px;
 }
