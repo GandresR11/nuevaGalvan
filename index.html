@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="es"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Saloon | Elegancia y Estilo</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&amp;display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="imagenes/imagen_logo.png">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@200;300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Montserrat:wght@200;400;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&amp;family=Montserrat:wght@200;300;400;600&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -17,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
    
 </head>
-<body>
+<body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
 
   <!--  <header>
         <div class="nav-logo"><img src="imagenes/logo_completo.png" alt="Logo The Saloon" style="height: 50px;"></div>
@@ -31,7 +29,7 @@
             </ul>
         </nav>
     </header>-->
- <header class="main-header">
+ <header class="main-header" style="background: rgba(10, 10, 10, 0.98); padding: 0.8rem 5%;">
         <div class="nav-container">
             <div class="logo">
                 <img src="imagenes/logo_completo.png" alt="The Saloon Logo">
@@ -52,26 +50,26 @@
         </div>
     </header>
     <section id="home">
-        <h1 data-aos="fade-up">Arte, Estilo y Distinción</h1>
-        <p data-aos="fade-up" data-aos-delay="200">Tu cabello merece el trato de una joya.</p>
-        <button class="btn-gold" data-aos="zoom-in" data-aos-delay="400" onclick="openCalendar()">Agendar Cita</button>
+        <h1 data-aos="fade-up" class="aos-init aos-animate">Arte, Estilo y Distinción</h1>
+        <p data-aos="fade-up" data-aos-delay="200" class="aos-init aos-animate">Tu cabello merece el trato de una joya.</p>
+        <button class="btn-gold aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400" onclick="openCalendar()">Agendar Cita</button>
     </section>
 
-    <section id="about" data-aos="fade-right">
+    <section id="about" data-aos="fade-right" class="aos-init aos-animate">
         <h2 class="section-title">Nuestra <span>Esencia</span></h2>
         <figure class="imagen-destacada">
         <img src="imagenes/Equipo.jpeg" alt="Nuestros Estilistas">
         </figure>
         <p class="section-text">Somos un refugio de elegancia donde la técnica de vanguardia se encuentra con el servicio personalizado de lujo. Cada corte es una obra maestra diseñada para resaltar tu identidad.</p>
     </section>
-<section id="aboutV" data-aos="fade-right">
+<section id="aboutV" data-aos="fade-right" class="aos-init aos-animate">
   <h2 class="section-title">Nuestra <span>Esencia</span></h2>
 
   <!-- Contenedor de videos -->
   <div class="videos-container">
-    <video src="imagenes/Cliente1.mp4" class="video-ig" autoplay muted loop playsinline></video>
-    <video src="imagenes/Novia6.mp4" class="video-ig" autoplay muted loop playsinline></video>
-    <video src="imagenes/Cliente2.mp4" class="video-ig" autoplay muted loop playsinline></video>
+    <video src="imagenes/Cliente1.mp4" class="video-ig" autoplay="" muted="" loop="" playsinline=""></video>
+    <video src="imagenes/Novia6.mp4" class="video-ig" autoplay="" muted="" loop="" playsinline=""></video>
+    <video src="imagenes/Cliente2.mp4" class="video-ig" autoplay="" muted="" loop="" playsinline=""></video>
   </div>
 
   <p class="section-text">
@@ -81,60 +79,49 @@
 </section>
 
     <section id="services" class="bg-darker services-section">
-  <h2 class="section-title" data-aos="fade-up">Servicios <span>Exclusivos</span></h2>
+  <h2 class="section-title aos-init aos-animate" data-aos="fade-up">Servicios <span>Exclusivos</span></h2>
   
   <div class="grid-container">
-    
-    <!-- Tarjeta 1 -->
-    <div class="card" data-aos="flip-left">
-      <div class="card-header">
-        <i class="fas fa-cut card-icon"></i>
-        <h3>Peluquería</h3>
-      </div>
-      <ul class="lista-servicios">
-        <li><span class="servicio-nombre">Peinado Corto</span><span class="servicio-valor">14,95</span></li>
-        <li><span class="servicio-nombre">Peinado Melena</span><span class="servicio-valor">16,95</span></li>
-        <!-- ... resto de servicios ... -->
-      </ul>
+    <div class="card">
+        <div class="card-header">
+            <i class="fas fa-cut card-icon"></i>
+            <h3>Peluquería</h3>
+        </div>
+        <ul class="lista-servicios">
+            <li><span class="servicio-nombre">Corte</span><span class="servicio-valor">15€</span></li>
+            <li><span class="servicio-nombre">Peinado</span><span class="servicio-valor">20€</span></li>
+        </ul>
     </div>
-
-    <!-- Tarjeta 2 -->
-    <div class="card" data-aos="flip-left" data-aos-delay="200">
-      <div class="card-header">
-        <i class="fas fa-magic card-icon"></i>
-        <h3>Colorimetría</h3>
-      </div>
-      <ul class="lista-servicios">
-        <li><span class="servicio-nombre">Color Raíz Orgánica</span><span class="servicio-valor">28,00</span></li>
-        <!-- ... resto de servicios ... -->
-      </ul>
+<div class="card">
+        <div class="card-header">
+            <i class="fas fa-cut card-icon"></i>
+            <h3>Peluquería</h3>
+        </div>
+        <ul class="lista-servicios">
+            <li><span class="servicio-nombre">Corte</span><span class="servicio-valor">15€</span></li>
+            <li><span class="servicio-nombre">Peinado</span><span class="servicio-valor">20€</span></li>
+        </ul>
     </div>
-
-    <!-- Tarjeta 3 -->
-    <div class="card" data-aos="flip-left" data-aos-delay="400">
-      <div class="card-header">
-        <i class="fas fa-crown card-icon"></i>
-        <h3>Tratamientos Capilares</h3>
-      </div>
-      <ul class="lista-servicios">
-        <li><span class="servicio-nombre">Barros de Nutrición</span><span class="servicio-valor">16,00</span></li>
-        <!-- ... resto de servicios ... -->
-      </ul>
+  <div class="card">
+        <div class="card-header">
+            <i class="fas fa-cut card-icon"></i>
+            <h3>Peluquería</h3>
+        </div>
+        <ul class="lista-servicios">
+            <li><span class="servicio-nombre">Corte</span><span class="servicio-valor">15€</span></li>
+            <li><span class="servicio-nombre">Peinado</span><span class="servicio-valor">20€</span></li>
+        </ul>
     </div>
-
-    <!-- Tarjeta 4 -->
-    <div class="card" data-aos="flip-left">
-      <div class="card-header">
-        <i class="fas fa-cut card-icon"></i>
-        <h3>Caballeros</h3>
-      </div>
-      <ul class="lista-servicios">
-        <li><span class="servicio-nombre">Corte con Lavado</span><span class="servicio-valor">15,00</span></li>
-        <!-- ... resto de servicios ... -->
-      </ul>
+    <div class="card">
+        <div class="card-header">
+            <i class="fas fa-magic card-icon"></i>
+            <h3>Color</h3>
+        </div>
+        <ul class="lista-servicios">
+            <li><span class="servicio-nombre">Tinte</span><span class="servicio-valor">30€</span></li>
+        </ul>
     </div>
-
-  </div>
+</div>
 </section>
     <section id="exclusivo-novias">
         <div id="novias">
@@ -416,11 +403,11 @@
            </div>
     </section>-->
     <section id="servicestrcr" class="bg-darker services-section">
-        <h2 class="section-title" data-aos="fade-up">Miercoles y Jueves <span>de Jubilados</span></h2>
+        <h2 class="section-title aos-init aos-animate" data-aos="fade-up">Miercoles y Jueves <span>de Jubilados</span></h2>
         <div class="grid-container">
-            <div class="card" data-aos="flip-left">
+            <div class="card aos-init aos-animate" data-aos="flip-left" style="cursor: pointer;">
                 <i class="fas fa-cut card-icon"></i>
-                <ul class="lista-servicios">
+                <ul class="lista-servicios" style="">
         <li>
             <span class="servicio-nombre">Color Raiz Organica</span>
             <span class="servicio-puntos"></span>
@@ -479,9 +466,9 @@
     </section>-->
 
     <section id="contact">
-        <h2 class="section-title" data-aos="fade-up">Reserva tu <span>Experiencia</span></h2>
-        <p data-aos="fade-up">Haz clic en el botón inferior para abrir nuestra agenda oficial y elegir tu horario.</p>
-        <button class="btn-gold" data-aos="zoom-in" onclick="openCalendar()">Abrir Calendario de Citas</button>
+        <h2 class="section-title aos-init aos-animate" data-aos="fade-up">Reserva tu <span>Experiencia</span></h2>
+        <p data-aos="fade-up" class="aos-init">Haz clic en el botón inferior para abrir nuestra agenda oficial y elegir tu horario.</p>
+        <button class="btn-gold aos-init" data-aos="zoom-in" onclick="openCalendar()">Abrir Calendario de Citas</button>
     </section>
 
     <div id="calendarModal" class="modal-overlay">
@@ -529,9 +516,7 @@
          </div>
     <div class="location-map">
            
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.123456789!2d-3.6923456!3d40.4812345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42296068694073%3A0x6a08608f1b62985b!2sC.%20de%20Pedro%20Rico%2C%2013%2C%20Fuencarral-El%20Pardo%2C%2028029%20Madrid%2C%20España!5e0!3m2!1ses!2s!4v1700000000000" 
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3035.123456789!2d-3.6923456!3d40.4812345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42296068694073%3A0x6a08608f1b62985b!2sC.%20de%20Pedro%20Rico%2C%2013%2C%20Fuencarral-El%20Pardo%2C%2028029%20Madrid%2C%20España!5e0!3m2!1ses!2s!4v1700000000000" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
    
@@ -573,7 +558,7 @@
 </section>-->
 
     <footer>
-        <p style="text-align:center">&copy; 2026 The Saloon by Mr. Galvan - Guillermo Riaño Diseño Web -</p>
+        <p style="text-align:center">© 2026 The Saloon by Mr. Galvan - Guillermo Riaño Diseño Web -</p>
         <div class="social-links" style="justify-content:center;">
             
                     <a href="https://maps.google.com/?q=Calle+Pedro+Rico+13+Madrid+España" target="_blank"><i class="fas fa-map-marker-alt"></i></a>
@@ -585,5 +570,6 @@
  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script> 
     
-</body>
-</html>
+
+
+</body></html>
