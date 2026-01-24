@@ -1,9 +1,3 @@
-// Inicializar librería de animaciones AOS
-AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100
-});
 
 // Referencias de elementos del DOM
 const modal = document.getElementById("calendarModal");
@@ -42,65 +36,58 @@ window.addEventListener('scroll', function() {
 });
 
 // Menú Móvil toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('.nav-menu');
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // --- Lógica del Menú Móvil ---
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    const icon = menuToggle.querySelector('i');
-    icon.classList.toggle('fa-bars');
-    icon.classList.toggle('fa-times');
-});
+    // Solo ejecutamos si el botón existe
+    if (menuToggle && navMenu) {
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (icon) {
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            }
+        });
 
-// Cerrar menú al hacer clic en un link (Móvil)
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-        document.querySelector('.menu-toggle i').classList.add('fa-bars');
-        document.querySelector('.menu-toggle i').classList.remove('fa-times');
+        // Cerrar menú al hacer clic en un link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.add('fa-bars');
+                    icon.classList.remove('fa-times');
+                }
+            });
+        });
+    }
+
+    // --- Lógica de las Cards (Acordeón) ---
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        card.addEventListener('click', function (e) {
+            // Si el clic fue dentro de la lista, no hacemos nada
+            if (e.target.closest('.lista-servicios')) return;
+
+            const currentList = this.querySelector('.lista-servicios');
+            if (!currentList) return; // Seguridad
+
+            const isOpen = currentList.classList.contains('show');
+
+            // 1. Ocultar TODAS las listas
+            document.querySelectorAll('.lista-servicios').forEach(lista => {
+                lista.classList.remove('show');
+            });
+
+            // 2. Si la actual no estaba abierta, abrirla
+            if (!isOpen) {
+                currentList.classList.add('show');
+            }
+        });
     });
-});
-
-  const headers = document.querySelectorAll('.card-header');
-
-  headers.forEach(header => {
-    header.addEventListener('click', () => {
-      // Ocultar todas las listas
-      document.querySelectorAll('.lista-servicio').forEach(list => list.classList.remove('show'));
-      
-      // Mostrar solo la lista de la tarjeta clicada
-      const list = header.nextElementSibling;
-      list.classList.add('show');
-    });
-  });
-
-
-   document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.card');
-
-  cards.forEach(card => {
-    // Cambiamos el cursor para indicar que es clickeable
-    card.style.cursor = 'pointer';
-
-    card.addEventListener('click', function(e) {
-      // 1. Encontrar la lista dentro de ESTA tarjeta
-      const currentList = this.querySelector('.lista-servicios');
-      
-      // 2. Verificar si ya está abierta
-      const isOpen = currentList.classList.contains('show');
-
-      // 3. Cerrar TODAS las listas en todas las tarjetas
-      document.querySelectorAll('.lista-servicios').forEach(lista => {
-        lista.classList.remove('show');
-        lista.style.maxHeight = null; // Limpieza adicional para animaciones
-      });
-
-      // 4. Si la lista no estaba abierta, abrirla
-      if (!isOpen) {
-        currentList.classList.add('show');
-        // Opcional: si usas transiciones, esto ayuda a calcular el alto
-        currentList.style.maxHeight = currentList.scrollHeight + "px";
-      }
-    });
-  });
 });
