@@ -127,7 +127,7 @@ header {
 
 
 
-.lista-servicios {list-style: none; /* Quita los puntos negros de la lista *//* padding: 0; */margin-top: 20px;}
+/*.lista-servicios {list-style: none; /* Quita los puntos negros de la lista *//* padding: 0; margin-top: 20px;}*/
 
 
 /*
@@ -288,7 +288,7 @@ section {padding: 120px 10%;text-align: center;}
 .card:hover { border-color: var(--dorado); transform: translateY(-10px); }
 
 .card-icon { color: var(--dorado); font-size: 2.5rem; margin-bottom: 20px; }
-.card-header{padding: 20px;}
+/*.card-header{padding: 20px;}*/
 .product-placeholder { height: 200px; background: #222; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #444; }
 
 .price { color: var(--dorado); font-weight: bold; margin-top: 10px; }
@@ -780,22 +780,34 @@ video::-webkit-media-controls-play-button {
   margin-top: 4px;
 }
 /* Asegura que las listas estén ocultas por defecto */
+/* Estado Inicial: Oculto */
+/* 1. Estado base: oculto mediante altura 0 */
+/* 1. Estado base: oculto mediante altura 0 */
 .lista-servicios {
-    display: none; /* O puedes usar max-height: 0; overflow: hidden; para animar */
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
-    transition: opacity 0.4s ease;
-    padding: 0px 0px 0px 0px;
-    margin: 0px 0px 20px 0px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    transition: max-height 0.5s ease-out, opacity 0.3s ease;
 }
 
-/* Esta es la clase que activa el JavaScript */
+/* 2. Estado activo: se activa con la clase .show */
 .lista-servicios.show {
-    display: block !important;
+    max-height: 1000px; /* Un valor lo suficientemente alto */
     opacity: 1;
-    max-height: 1000px; /* Un valor alto para que se vea todo el contenido */
+    margin-top: 20px;
+    padding-bottom: 10px;
+    transition: max-height 0.5s ease-in, opacity 0.5s ease;
 }
 
-/* Evita que los clics dentro de la lista cierren la tarjeta accidentalmente */
-.lista-servicios li {
-    cursor: default;
+/* 3. Estilo visual de la card para que se sepa que es clickeable */
+.card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.card:active {
+    transform: scale(0.98);
 }
