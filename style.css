@@ -124,389 +124,167 @@ header {
 }
 
 .nav-link:hover { color: var(--dorado); }
-
-
-
-/*.lista-servicios {list-style: none; /* Quita los puntos negros de la lista *//* padding: 0; margin-top: 20px;}*/
-
-
-/*
-.lista-servicios li {
-
-    display: flex;
-
-    align-items: baseline; /* Alinea el texto por la base de las letras */
-/*
-    gap: 5px;
-
-    margin-bottom: 8px;
-
-    font-size: 0.95rem;
-
-}*/
-
-
-
 .servicio-puntos {
-
     flex-grow: 1; /* Esto hace que los puntos crezcan hasta llenar el vacío */
-
     border-bottom: 1.5px dotted #aaa; /* Aquí defines el color y grosor de los puntos */
-
     height: 1.2em; /* Ajusta la posición vertical de los puntos */
-
 }
-
-
-
 .servicio-nombre {
-
     font-weight: 600;
-
     color: var(--blanco); /* O el color que uses en tu diseño */
-
 }
-
-
-
 .servicio-valor {
-
     font-weight: bold;
-
    color: var(--dorado); /* Un color dorado o resaltado para el precio */
-
 }
-
-
-
-
-
 /* SECCIONES */
-
 section {padding: 120px 10%;text-align: center;}
-
 .bg-darker { background-color: #050505; }
-
 .section-title { font-size: 2.5rem; margin-bottom: 30px; }
-
 .section-title span { color: var(--dorado); }
-
 .section-text { max-width: 800px; margin: 0 auto; color: var(--plateado); }
 
-
-
 /* HERO */
-
 #home {
-
     height: 75vh;
-
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-
                 url('https://github.com/GandresR11/nuevaGalvan/blob/main/imagenes/Encabezado2.jpeg?raw=true') center/cover;
-
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: center;
-
     background-attachment: fixed;
-
 }
-
-
-
 #home h1 { font-size: 3.5rem; margin-bottom: 10px; }
-
-
-
 /* BOTONES */
-
 .btn-gold {
-
     padding: 15px 40px;
-
     border: 1px solid var(--dorado);
-
     background: transparent;
-
     color: var(--dorado);
-
     text-transform: uppercase;
-
     letter-spacing: 3px;
-
     cursor: pointer;
-
     transition: var(--transition);
-
     margin-top: 30px;
-
 }
-
-
-
 .btn-gold:hover {
-
     background: var(--dorado);
-
     color: var(--negro);
-
     box-shadow: 0 0 20px rgba(197, 160, 89, 0.4);
-
 }
-
-
 
 /* CARDS (SERVICIOS/PRODUCTOS) */
-
 .grid-container {
-
     display: grid;
-
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-
     gap: 40px;
-
     margin-top: 50px;
-
     max-width: 900px;
-
     margin: 50px auto;
-
 }
-
-
-
 .card {background: var(--gris-oscuro);/* padding: 40px; */border: 1px solid #222;transition: var(--transition);}
-
-
-
 .card:hover { border-color: var(--dorado); transform: translateY(-10px); }
-
 .card-icon { color: var(--dorado); font-size: 2.5rem; margin-bottom: 20px; }
 /*.card-header{padding: 20px;}*/
 .product-placeholder { height: 200px; background: #222; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; color: #444; }
-
 .price { color: var(--dorado); font-weight: bold; margin-top: 10px; }
 
-
-
 /* MODAL */
-
 .modal-overlay {
-
     display: none;
-
     position: fixed;
-
     z-index: 2000;
-
     left: 0; top: 0; width: 100%; height: 100%;
-
     background-color: rgba(0, 0, 0, 0.95);
-
     backdrop-filter: blur(8px);
-
 }
-
-
-
 .modal-content {
-
     position: relative;
-
     background-color: var(--blanco);
-
     margin: 10% auto;
-
     width: 90%;
-
     max-width: 1000px;
-
     height: 85vh;
-
     border: 3px solid var(--dorado);
-
     border-radius: 10px;
-
     animation: slideUp 0.5s ease;
-
 }
-
-
-
 .close-modal {
-
     position: absolute;
-
     top: -12%; right: 3%;
-
     color: var(--dorado);
-
     font-size: 2rem;
-
     cursor: pointer;
-
 }
-
-
-
 @keyframes slideUp {
-
     from { opacity: 0; transform: translateY(50px); }
-
     to { opacity: 1; transform: translateY(0); }
-
 }
-
-
 
 /* WHATSAPP */
-
 .whatsapp-float {position: fixed;bottom: 10%;right: 10%;background: #25d366;color: white;width: 3.3rem;: 80px;border-radius: 50%;display: flex;justify-content: center;align-items: center;font-size: 3.5rem;z-index: 1000;transition: var(--transition);text-decoration: none;height: 3.2rem;}
-
 .whatsapp-float:hover { transform: scale(1.1); }
 
-
-
 /* --- SECCIÓN UBICACIÓN --- */
-
 .location-section {
-
     position: relative;
-
     background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), 
-
                 url('https://github.com/GandresR11/nuevaGalvan/blob/main/imagenes/Fondo1.jpeg?raw=true'); /* Cambia esta URL por la foto de tu local */
-
     background-size: cover;
-
     background-position: center;
-
     background-attachment: fixed;
-
     padding: 100px 5%;
-
 }
-
-
-
-
-
 .services-section {
-
     position: relative;
-
     background: linear-gradient(rgba(10, 10, 10, 0.85), rgba(10, 10, 10, 0.85)), 
-
                 url('https://github.com/GandresR11/nuevaGalvan/blob/main/imagenes/Servicios1.jpeg?raw=true'); /* Cambia esta URL por la foto de tu local */
-
     background-size: cover;
-
     background-position: center;
-
     background-attachment: fixed;
-
     padding: 100px 5%;
-
 }
-
-
-
 .location-container {
-
    display: flex;
-
     flex-wrap: wrap;
-
     gap: 40px;
-
     align-items: center;
-
     justify-content: space-between;
-
 }
-
-
-
 .location-info {
-
    /* flex: 1;*/
-
    /* min-width: 300px;*/
-
     text-align: left;
-
     background: rgba(0, 0, 0, 0.6);
 margin: auto;
     padding: 40px;
-
     border-left: 3px solid var(--dorado);
-
 }
-
-
-
 .info-box h3 {
-
     color: var(--dorado);
-
     margin-bottom: 10px;
-
     font-size: 1.4rem;
-
 }
-
-
-
 .info-box p {
-
     margin-bottom: 5px;
-
     color: var(--plateado);
-
 }
-
-
-
 .map-link {
-
     color: var(--dorado);
-
     text-decoration: underline;
-
     font-size: 0.9rem;
-
     transition: var(--transition);
-
 }
-
-
-
 .map-link:hover {
-
     color: var(--blanco);
-
 }
-
-
-
 .social-links {
-
     margin: 15px 0;
-
     /*font-size: 2.5rem;*/
-
     display: flex;
-
     gap: 20px;
-
     color: var(--dorado);
-
 }
 .social-links a {
   display: block;
@@ -515,83 +293,47 @@ margin: auto;
   /*color: #333;*/
   font-size: 18px;
 }
-
 .social-links i {
   margin-right: 8px;
   color: var(--dorado); /* verde WhatsApp por ejemplo */
 }
-
-
 .social-links i:hover {
-
-    color: var(--plateado);
-
+   color: var(--plateado);
 }
-
-
-
 .location-map {
-
     /*flex: 1;*/
-
     /*min-width: 300px;*/
     margin:auto;
-
     border: 1px solid var(--dorado);
-
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-
 }
-
-
 
 /* Ajuste móvil */
-
 @media (max-width: 768px) {
-
     .location-info { text-align: center; border-left: none; border-bottom: 3px solid var(--dorado); }
-
     .social-links { justify-content: center; }
-
 }
-
 .imagen-destacada img {
-
     width: 100%;        /* En móviles ocupa todo el ancho */
-
     max-width: 600px;   /* En pantallas grandes, no pasará de 600px (ajusta este valor a tu gusto) */
-
     height: auto;
-
     display: block;
-
     margin: auto;  /* El 'auto' en los lados centra la imagen cuando es más pequeña que la pantalla */
-    padding:0;
+   padding:0;
     border-radius: 8px;
-
     mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
-
     filter: brightness(0.8);
-
 }
-
-
 
 /* FOOTER */
-
 footer { padding: 50px; border-top: 1px solid #222; color: #555; font-size: 0.8rem; }
 
-
-
 /* RESPONSIVE */
-
 @media (max-width: 768px) {
-
     .nav-menu { display: none; }
-
     #home h1 { font-size: 2.2rem; }
-
 }
+
 /* MEDIA QUERIES PARA ESCRITORIO */
 @media (min-width: 992px) {
     .logo img { height: 60px; }
@@ -606,6 +348,7 @@ footer { padding: 50px; border-top: 1px solid #222; color: #555; font-size: 0.8r
     .location-grid { grid-template-columns: 1fr 1fr; align-items: center; }
     .price-list li { font-size: 1.1rem; }
 }
+
 /* SERVICIOS RESPONSIVOS */
 .services-container { padding: 50px 20px; }
 .tabs-scroll-container { 
@@ -617,7 +360,6 @@ footer { padding: 50px; border-top: 1px solid #222; color: #555; font-size: 0.8r
 .tabs-menu { display: inline-flex; gap: 10px; padding-bottom: 10px; }
 .tab-btn { padding: 8px 15px; background: white; border: 1px solid #ddd; font-size: 0.8rem; }
 .tab-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
-
 .price-list li { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.9rem; border-bottom: 1px solid #eee; }
 
 /* BOTONES FLOTANTES MÁS PEQUEÑOS EN MÓVIL */
@@ -627,65 +369,30 @@ footer { padding: 50px; border-top: 1px solid #222; color: #555; font-size: 0.8r
     display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 99;
 }
 .floating-bridal-btn span { font-size: 0.5rem; font-weight: bold; color: var(--primary); }
-
-/*.whatsapp-float { 
-position: fixed; 
-right: 15px; 
-bottom: 15px; 
-background: #25d366; 
-color: white; 
-width: 55px; 
-height: 55px; 
-border-radius: 50%; 
-display: flex; 
-align-items: center; 
-justify-content: center; 
-font-size: 25px; 
-z-index: 99; 
-text-decoration: none; }*/
-
 .videos-container {
   display: flex;              /* Activa flexbox */
   justify-content: center;    /* Centra los videos horizontalmente */
   gap: 20px;                  /* Espacio entre videos */
   margin: 20px 0;
 }
-
 .videos-container video {
   width: 30%;                 /* Cada video ocupa un tercio del ancho */
   border-radius: 8px;         /* Bordes redondeados opcionales */
 }
-
 .video-ig {
   width: 320px;      /* tamaño típico Instagram */
   height: 320px;     /* cuadrado */
   object-fit: cover; /* recorta para mantener proporción */
   border-radius: 12px;
 }
-
 /* Ocultar todos los controles excepto el botón de play */
 video::-webkit-media-controls-panel {
   display: none !important;
   -webkit-appearance: none;
 }
-
 video::-webkit-media-controls-play-button {
   display: block !important;
 }
-/*
-.lista-servicios {
-  display: none; /* ocultas todas las listas inicialmente margin-top: 10px;
-}
-
-.lista-servicios {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-}
-
-.lista-servicios.show {
-  max-height: 500px; /* ajusta según el contenido 
-}*/
 /*Boton Novias*/
 .btn-noviasl {
   position: fixed;
