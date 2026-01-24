@@ -729,11 +729,11 @@ video::-webkit-media-controls-play-button {
 .lista-servicios.show {
   max-height: 500px; /* ajusta según el contenido */
 }
-/*BOton novias*/
+/* Boton novias */
 .btn-noviasl {
   position: fixed;
-  bottom:10%;
-  left:10%;
+  bottom: 10%;
+  left: 10%;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -748,6 +748,8 @@ video::-webkit-media-controls-play-button {
   box-shadow: 0 6px 18px rgba(0,0,0,0.3);
   transition: transform 0.3s ease, background 0.3s ease;
   z-index: 999;
+  /* Importante para el efecto de brillo */
+  overflow: hidden; 
 }
 
 .btn-noviasl:hover {
@@ -756,20 +758,55 @@ video::-webkit-media-controls-play-button {
   color: var(--dorado);
 }
 
+/* Efecto de Brillo (Shimmer) */
+.shimmer-effect::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.4);
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.5) 50%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  /* Animación de 1.5s de duración, se repite cada 10s */
+  animation: shine 10s infinite ease-in-out;
+}
+
+@keyframes shine {
+  0% { left: -150%; }
+  15% { left: 150%; } /* El brillo cruza rápido al inicio */
+  100% { left: 150%; } /* Se queda esperando el resto de los 10 segundos */
+}
+
 /* Texto "Exclusivo" elegante */
 .btn-noviasl .exclusivo {
-  font-family: 'Cormorant Garamon', serif; /* fuente elegante */
+  font-family: 'Cormorant Garamond', serif; 
   font-size: 1rem;
   font-style: italic;
   font-weight: 400;
   letter-spacing: 0.2rem;
-
+  position: relative;
+  z-index: 2;
 }
 
-/* Texto "NOvias" minimalista */
+/* Texto "Novias" minimalista */
 .btn-noviasl .novias {
-  font-family: 'Montserrat', sans-serif; /* fuente moderna */
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
-  font-weight: 999;
+  font-weight: 900;
   margin-top: 4px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Asegurar que el icono esté sobre el brillo */
+.btn-noviasl i {
+  position: relative;
+  z-index: 2;
 }
