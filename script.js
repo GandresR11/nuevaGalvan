@@ -66,7 +66,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   headers.forEach(header => {
     header.addEventListener('click', () => {
       // Ocultar todas las listas
-      document.querySelectorAll('.lista-servicios').forEach(list => list.classList.remove('show'));
+      document.querySelectorAll('.lista-servicio').forEach(list => list.classList.remove('show'));
       
       // Mostrar solo la lista de la tarjeta clicada
       const list = header.nextElementSibling;
@@ -75,23 +75,32 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 
 
-    
-  // Selecciona todos los títulos de las tarjetas
+   document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.card');
 
   cards.forEach(card => {
-    const title = card.querySelector('h3');
-    const list = card.querySelector('.lista-servicios');
+    // Cambiamos el cursor para indicar que es clickeable
+    card.style.cursor = 'pointer';
 
-    // Al hacer clic en el título
-    title.addEventListener('click', () => {
-      // Oculta todas las listas primero
-      document.querySelectorAll('.lista-servicios').forEach(l => l.style.display = 'none');
+    card.addEventListener('click', function(e) {
+      // 1. Encontrar la lista dentro de ESTA tarjeta
+      const currentList = this.querySelector('.lista-servicios');
+      
+      // 2. Verificar si ya está abierta
+      const isOpen = currentList.classList.contains('show');
 
-      // Muestra solo la lista de la tarjeta clicada
-      list.style.display = 'block';
+      // 3. Cerrar TODAS las listas en todas las tarjetas
+      document.querySelectorAll('.lista-servicios').forEach(lista => {
+        lista.classList.remove('show');
+        lista.style.maxHeight = null; // Limpieza adicional para animaciones
+      });
+
+      // 4. Si la lista no estaba abierta, abrirla
+      if (!isOpen) {
+        currentList.classList.add('show');
+        // Opcional: si usas transiciones, esto ayuda a calcular el alto
+        currentList.style.maxHeight = currentList.scrollHeight + "px";
+      }
     });
   });
-
-document.querySelectorAll('.lista-servicios').forEach(l => l.classList.remove('show'));
-list.classList.add('show');
+});
