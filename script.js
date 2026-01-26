@@ -111,5 +111,48 @@ window.onclick = function(event) {
         modalSq.style.display = "none";
     }
 }
+const servicesData = {
+    balayage: {
+        title: "Balayage Premium",
+        desc: "Técnica de aclarado natural para dar luminosidad y dimensión a tu cabello.",
+        video: "video/balayage.mp4"
+    },
+    corte: {
+        title: "Corte de Tendencia",
+        desc: "Estilos personalizados que resaltan tus facciones siguiendo las últimas modas.",
+        video: "video/corte.mp4"
+    },
+    hidratacion: {
+        title: "Hidratación Profunda",
+        desc: "Tratamiento intensivo para recuperar el brillo y la suavidad natural de tu fibra capilar.",
+        video: "video/hidratacion.mp4"
+    }
+};
 
+function showService(id, element) {
+    // 1. Cambiar clase activa en el menú
+    document.querySelectorAll('.service-item').forEach(li => li.classList.remove('active'));
+    element.classList.add('active');
+
+    // 2. Animación de salida
+    const display = document.getElementById('service-display');
+    display.style.opacity = 0;
+
+    setTimeout(() => {
+        // 3. Cambiar datos
+        const data = servicesData[id];
+        document.getElementById('service-title').innerText = data.title;
+        document.getElementById('service-desc').innerText = data.desc;
+        
+        const video = document.getElementById('service-video');
+        const source = document.getElementById('video-source');
+        source.src = data.video;
+        
+        video.load(); // Recarga el video con la nueva fuente
+        video.play();
+
+        // 4. Animación de entrada
+        display.style.opacity = 1;
+    }, 400);
+}
 
