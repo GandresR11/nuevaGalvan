@@ -529,3 +529,82 @@ video::-webkit-media-controls-play-button {
 .card:active {
     transform: scale(0.98);
 }
+.services-interactive {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.services-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Menú lateral */
+.services-menu {
+    list-style: none;
+    flex: 1;
+    padding: 0;
+}
+
+.service-item {
+    padding: 15px 0;
+    font-size: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+    color: #444;
+}
+
+.service-item:hover, .service-item.active {
+    color: #c5a059; /* Tu dorado */
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+/* Panel de exhibición */
+.service-display {
+    flex: 1.5;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: opacity 0.4s ease;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.service-info {
+    padding: 25px;
+}
+
+.service-info h3 {
+    color: #c5a059;
+    margin-top: 0;
+}
+
+/* Ajuste para Móviles */
+@media (max-width: 768px) {
+    .services-container {
+        flex-direction: column;
+    }
+    .services-menu {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+    .service-item {
+        border-bottom: none;
+        font-size: 16px;
+    }
+}
