@@ -91,3 +91,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+const modalSq = document.getElementById("bookingModal");
+const btnSq = document.getElementById("openModalSq");
+const closeBtnSq = document.querySelector(".close-button");
+
+// Abrir modal
+btnSq.onclick = function() {
+    modalSq.style.display = "block";
+}
+
+// Cerrar modal al hacer clic en la X
+closeBtnSq.onclick = function() {
+    modalSq.style.display = "none";
+}
+
+// Cerrar modal al hacer clic fuera de la caja blanca
+window.onclick = function(event) {
+    if (event.target == modalSq) {
+        modalSq.style.display = "none";
+    }
+}
+
+
